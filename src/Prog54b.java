@@ -26,3 +26,15 @@ public class Prog54b {
 
     }
 }
+/*
+C:\Users\dries.k\.jdks\openjdk-18.0.2.1\bin\java.exe "-javaagent:C:\Program Files (x86)\JetBrains\IntelliJ IDEA Community Edition 2021.3.1\lib\idea_rt.jar=53447:C:\Program Files (x86)\JetBrains\IntelliJ IDEA Community Edition 2021.3.1\bin" -Dfile.encoding=UTF-8 -classpath "C:\Users\dries.k\IdeaProjects\AP Computer Science\out\production\AP Computer Science" Prog54b
+Please enter 1st value: 475
+Please enter the 2nd value: 821
+Please enter the 3rd value: 369
+Please enter the 4th value: 562
+The sum is: 2227
+The average is: 556.75
+
+Process finished with exit code 0
+
+ */

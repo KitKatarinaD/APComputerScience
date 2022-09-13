@@ -17,11 +17,11 @@ public class Prog88a {
         //The code inside 'if' will only run if condition is true
         if (num1 > num2) {
             max = num1;
-        }
-        else { // otherwise...
+        } else { // otherwise...
             // (num2 > num1)
 
-    }
+        }
 
         System.out.println("Maximum");
+    }
 }

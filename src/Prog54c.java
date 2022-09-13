@@ -1,6 +1,6 @@
 // Katarina Dries
 //9/12/2022
-//Prog54b
+//Prog54c
 
 
 import java.util.Scanner;

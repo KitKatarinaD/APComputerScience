@@ -24,10 +24,22 @@ public class Prog58h {
 
         double S = A - P;
 
-        System.out.print("The interest earned is: " + S );
+        System.out.println("The interest earned is: " + S );
 
-        System.out.print("The total amount in savings is now: " + A);
+        System.out.println("The total amount in savings is now: " + A);
 
+        /*
+        C:\Users\16087\.jdks\openjdk-18.0.2.1\bin\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2022.2.1\lib\idea_rt.jar=52131:C:\Program Files\JetBrains\IntelliJ IDEA 2022.2.1\bin" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath "C:\Users\16087\Desktop\APComputerScience\out\production\AP Computer Science" Prog58h
+Please enter the amount saved: 5000
+Please enter your interest rate:11.5
+Please enter the number of times your interest is compounded per year:365
+Please enter the number of days at interest: 900
+The interest earned is: 1638.9571470100136
+The total amount in savings is now: 6638.957147010014
+
+Process finished with exit code 0
+
+         */
 
 
 

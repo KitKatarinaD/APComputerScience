@@ -20,6 +20,6 @@ public class LoopTest {
 C:\Users\dries.k\.jdks\openjdk-18.0.2.1\bin\java.exe "-javaagent:C:\Program Files (x86)\JetBrains\IntelliJ IDEA Community Edition 2021.3.1\lib\idea_rt.jar=65311:C:\Program Files (x86)\JetBrains\IntelliJ IDEA Community Edition 2021.3.1\bin" -Dfile.encoding=UTF-8 -classpath "C:\Users\dries.k\IdeaProjects\AP Computer Science\out\production\AP Computer Science" LoopTest
 1 2 3 4 5 6 7 8 9 10
 1 2 3 4 5 6 7 8 9 10
-
+c=4
 Process finished with exit code 0
  */

@@ -5,8 +5,15 @@ public class Prog65h {
         Scanner input = new Scanner(System.in);
 
         System.out.println("Please put in the pounds ");
+        double Pounds = input.nextDouble();
 
+        System.out.println("Please put in the Shillings: ");
+        double Shillings = input.nextDouble();
 
+        System.out.println("Please put in the Pence");
+        double Pence = input.nextDouble();
+
+        double DecimalPounds =
 
 
 

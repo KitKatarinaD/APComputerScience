@@ -8,7 +8,10 @@ public class Prog72t {
         int time1 = input.nextInt();
 
         System.out.println("Enter the second time: ");
+        int time2 = input.nextInt();
 
+        int timeDifference =  (time1 - time2);
+        //math absolute value
 
 
 

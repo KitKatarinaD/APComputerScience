@@ -6,7 +6,7 @@ public class Prog166f {
         while (num1 < 110) {
             num1 ++;
             num2 = num1 + num2;
-            if (num1 == 100 || num1==101 ||num1 == 102 || num1==103 ||num1==104 ||num1==105 ||num1==106 || num1 == 107 || num1==108 ||num1 == 109 || num1==110 ){
+            if (num1 >=100){
              System.out.println("The sum of the numbers from 1 to " + num1 + " is " + num2);
             }
         }

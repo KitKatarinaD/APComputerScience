@@ -2,46 +2,35 @@
 import java.util.Scanner;
 
 public class LP41 {
-    public static void main(String [] args)  {
+    public static void main(String[] args) {
 
-      System.out.println("Please state number of copies: ");
+        System.out.println("Please state number of copies: ");
         Scanner imput = new Scanner(System.in);
         int copy = imput.nextInt();
-        double total =0;
-
+        double total = 0;
+        double price = 0;
 
         if (copy <= 99) {
-            System.out.println("Price per copy is: $0.30");
-            total = copy * 0.3;
-            System.out.println("Total cost is: $" + total);
+            price = 0.3;
+        } else if (copy > 99 && copy <= 499) {
+            price = 0.28;
+        } else if (copy > 499 && copy <= 749) {
+            price = 0.27;
+        } else if (copy > 749 && copy <= 1000) {
+            price = 0.26;
+        } else if (copy > 1000) {
+            price = 0.25;
         }
 
-       if  (copy > 99 && copy <= 499) {
-           System.out.println("Price per copy is $0.28");
-           total = copy * 0.28;
-           System.out.println("Total cost is: $" + total);
-       }
-       if (copy > 499 && copy <= 749) {
-           System.out.println("Price per copy is $0.27");
-           total = copy * 0.27;
-           System.out.println("Total cost is: $" + total);
-       }
-        if (copy > 749 && copy <= 1000) {
-            System.out.println("Price per copy is $0.26");
-            total = copy * 0.26;
-            System.out.println("Total cost is: $" + total);
-        }
-        if (copy > 1000) {
-            System.out.println("Price per copy is $0.25");
-            total = copy * 0.25;
-            System.out.println("Total cost is: $" + total);
-        }
+
+        total = copy * price;
+        System.out.printf("Price per copy is $%.2f\n", price);
+        System.out.printf("Total cost is: $%.2f\n", total);
 
     }
-
 }
-/*
-C:\Users\16087\.jdks\openjdk-18.0.2.1\bin\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2022.2.1\lib\idea_rt.jar=52701:C:\Program Files\JetBrains\IntelliJ IDEA 2022.2.1\bin" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath "C:\Users\16087\Desktop\APComputerScience\out\production\AP Computer Science" LP41
+    /*
+C:\Users\16087\.jdks\openjdk-18.0.2.1\bin\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2022.2.1\lib\idea_rt.jar=53621:C:\Program Files\JetBrains\IntelliJ IDEA 2022.2.1\bin" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath "C:\Users\16087\Desktop\APComputerScience\out\production\AP Computer Science" LP41
 Please state number of copies:
 1001
 Price per copy is $0.25

@@ -11,7 +11,7 @@ public class Salesperson {
         myComm = 0;
     }
 
-    public void setMyComm() {
+    public void setComm() {
         if (myComm == 5 || myComm == 8) {
             if (mySales<=5000) {
                 myComm = getSales() * 0.075;

@@ -11,7 +11,7 @@ public class cl82ahelper {
     public void calc(){
         myfine = 20.00 + (myVSpeed - mySpdLmt) * 5.00;
     }
-    public double getFine(){
+    public double getmyfine(){
         return myfine;
     }
 }

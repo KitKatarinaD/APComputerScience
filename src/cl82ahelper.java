@@ -4,12 +4,13 @@ public class cl82ahelper {
     private double myfine;
 
     public cl82ahelper(double sl, double vs) {
-        double mySpdLmt = sl;
-        double myVSpeed = vs;
-        double myfine =0;
+        mySpdLmt = sl;
+        myVSpeed = vs;
+        myfine =0;
     }
     public void calc(){
-        myfine = 20.00 + (myVSpeed - mySpdLmt) * 5.00;
+
+        myfine = (double) (myVSpeed - mySpdLmt) * 5.00 + 20.00;
     }
     public double getmyfine(){
         return myfine;

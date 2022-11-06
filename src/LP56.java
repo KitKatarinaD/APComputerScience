@@ -7,23 +7,35 @@ public class LP56 {
         int yup = input.nextInt();
         int sum = 0;
         int lcv = 0;
-        int x = (int) Math.pow(10, lcv);
-        // yup % 100 = 92     92/10=9     9 + ( 92 %\10)
-        //while (lcv!=yup) { lcv
+        int x = 0;
+
         while (x < yup) {
-        lcv ++;
+            x = (int) Math.pow(10, lcv);
+            lcv ++;
         }
         lcv--;
-
+        x = (int) Math.pow(10, lcv);
 
         while (lcv > -1){
-            yup += Math.floor((double)(yup/x)) + ((double) yup % x);
+            x = (int) Math.pow(10, lcv);
+            sum += (int) (Math.floor((double)(yup/x)) );
+            yup = (int) Math.floor((double) yup % x);
             lcv--;
+
         }
 
-       System.out.println(yup);
+       System.out.println(sum);
 
         }
 
     }
 
+    /*
+    C:\Users\katar\.jdks\openjdk-19.0.1\bin\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.3\lib\idea_rt.jar=55944:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.3\bin" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath "C:\Users\katar\IdeaProjects\APComputerScience\out\production\AP Computer Science" LP56
+Enter a positive integer:
+892
+19
+
+Process finished with exit code 0
+
+     */

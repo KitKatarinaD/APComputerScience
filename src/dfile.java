@@ -5,7 +5,7 @@ import java.io.*;
 public class dfile {
     public static void main(String [] args) {
         try {
-            Scanner input = new Scanner(new File("C:\\Users\\dries.k\\IdeaProjects\\AP Computer Science\\data\\prog285b.dat"));
+            Scanner input = new Scanner(new File("data/prog285b.dat"));
 
             System.out.println("done!");//dekets
             System.out.println("ID\t\tCode\tSales\t\tCommission");

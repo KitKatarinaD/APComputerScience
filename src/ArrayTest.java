@@ -18,8 +18,8 @@ public class ArrayTest {
 
         String[] words = {"Hello", "world", "wow", "cool", "wowsers", "cool beans"};
         //for (String temp : words;
-        for (int lcv = 0; lcv< words.length);
-            System.out.println(words[lcv] );
+     //   for (int lcv = 0; lcv< words.length;);
+         //   System.out.println(words[lcv] );
 
 
 

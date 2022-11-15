@@ -6,7 +6,7 @@ public class cl214bhelper {
     private double myshiftCode;
     private double myhrsworked;
 
-    public cl214bhelper()
+    //public cl214bhelper();
 
 
 }

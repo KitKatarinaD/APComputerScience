@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class prog209a {
 public static void main(String [] args) {
     try {
-        Scanner input = new Scanner(new File("C:\\Users\\dries.k\\IdeaProjects\\AP Computer Science\\data\\prog215a.dat"));
+        Scanner input = new Scanner("data/prog209a.dat");
 
         int num1 = 0;
         int num2 = 0;

@@ -5,7 +5,11 @@ public class cl214bhelper {
     private double  mybasepay;
     private double myshiftCode;
     private double myhrsworked;
-    private double grosspay;
+    private double mygrosspay;
+    private double mywholding;
+    private double myFICA;
+    private double mynetpay;
+    private double mytaxrate;
 
     public cl214bhelper(int ID, double ytdpay, double basepay, double shiftCode, double hrsworked) {
         myID = ID;
@@ -13,25 +17,52 @@ public class cl214bhelper {
         mybasepay = basepay;
         myshiftCode = shiftCode;
         myhrsworked = hrsworked;
-        grosspay = 0;
+        mygrosspay = 0;
+        mywholding = 0;
+        myFICA = 0;
+        mynetpay = 0;
+        mytaxrate = 0;
     }
+//The gross pay is found by multiplying the hours worked by the pay rate where
+//the pay rate is the product of the base pay rate and the shift factor.
+    public void calc() {
+        mygrosspay = myhrsworked * (mybasepay * myshiftCode);
+        if (mygrosspay < 100.00)
+            mytaxrate = 0.0;
+        else if (mygrosspay >= 100.0 && mygrosspay < 150.0) {
+            mytaxrate = 0.80;
+        }
+        else if (mygrosspay >= 150.0 && mygrosspay < 200.0){
+            mytaxrate = 0.120;
+        }
+        else if (mygrosspay >= 200.0 && mygrosspay < 300.0){
+            mytaxrate = 0.150;
+        }
+        else {
+            mytaxrate = 0.175;
+        }
+
+        mywholding = mygrosspay * mytaxrate;
+
+        if (myytdPay > 17300) {
+            myFICA = 0;
+        }
+        if ((myytdPay + mygrosspay) <= 17300  ) {
+            myFICA = 0.0605 * mygrosspay;
+        }
+        if ((myytdPay < 17300 && (myytdPay + mygrosspay) > 17,300)) {
+            myFICA = 0.0605 * (17300 - (myytdPay + mygrosspay))
+        }
+
+        mynetpay =
+    }
+
 
 
 }
 /* compute the employee’s gross pay, withholding tax, social security tax, and net pay,
 and print these results along with the employee’s number.
 
-The gross pay is found by multiplying the hours worked by the pay rate where
-the pay rate is the product of the base pay rate and the shift factor.
-
-
-The withholding tax is the product of the gross pay and the tax rate.
-The tax rate is found from the following table:
-Less than $100.00                                                                  0
-$100.00 to $149.99					 8%
-$150.00 to $199.00                                                               12%
-$200.00 to $299.99                                                               15%
-$300.00 or  more                                                                   17.5%
 
 The social security tax (FICA tax) depends on the gross pay and the year-to-date pay.
 If the year-to-date pay is greater than $17,300, then there is no social security tax.

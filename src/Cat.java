@@ -1,4 +1,3 @@
-public class cat {
 
     /**
  * Cat
@@ -38,5 +37,3 @@ public class Cat {
     public String getName() { return myName; }
 }
 
-
-}

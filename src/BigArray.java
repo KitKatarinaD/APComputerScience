@@ -1,5 +1,3 @@
-package Q1;
-
 public class BigArray {
     public static void main(String[] args) {
         /*
@@ -174,7 +172,7 @@ What numbers are multiples of 4?
 }
 
 /*
-C:\Users\dries.k\.jdks\openjdk-18.0.2.1\bin\java.exe "-javaagent:C:\Program Files (x86)\JetBrains\IntelliJ IDEA Community Edition 2021.3.1\lib\idea_rt.jar=58451:C:\Program Files (x86)\JetBrains\IntelliJ IDEA Community Edition 2021.3.1\bin" -Dfile.encoding=UTF-8 -classpath "C:\Users\dries.k\IdeaProjects\AP Computer Science\out\production\AP Computer Science" Q1.BigArray
+C:\Users\dries.k\.jdks\openjdk-18.0.2.1\bin\java.exe "-javaagent:C:\Program Files (x86)\JetBrains\IntelliJ IDEA Community Edition 2021.3.1\lib\idea_rt.jar=58451:C:\Program Files (x86)\JetBrains\IntelliJ IDEA Community Edition 2021.3.1\bin" -Dfile.encoding=UTF-8 -classpath "C:\Users\dries.k\IdeaProjects\AP Computer Science\out\production\AP Computer Science" BigArray
 70 35 86 34 27 51 85 84 44 22 52 86 31 77 56 34 26 65 57
 70 35 86 34 27 51 85 84 44 22 52 86 31 77 56 34 26 65 57
 The middle number is 22

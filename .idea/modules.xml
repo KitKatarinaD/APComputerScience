@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AP Computer Science.iml" filepath="$PROJECT_DIR$/AP Computer Science.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MSOE Comp/MSOE Comp.iml" filepath="$PROJECT_DIR$/MSOE Comp/MSOE Comp.iml" />
     </modules>
   </component>
 </project>

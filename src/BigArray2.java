@@ -1,24 +1,27 @@
 import java.awt.image.SinglePixelPackedSampleModel;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class BigArray2 {
     public static void main(String[] args) {
         try {
-            Scanner input = new Scanner(new File(("data/bigarraylist.dat"));
+            Scanner input = new Scanner(new File("data/bigarraylist.dat"));
             int numCats = input.nextInt();
             String name = input.nextLine();
             double weight = input.nextDouble();
-            int age = input.nextLine();
+            int age = Integer.parseInt(input.nextLine());
             double cost = input.nextDouble();
             input.nextLine();
+            Cat[] cats;
+            int lcv;
             cats[lcv] = new Cat(name, weight, age, cost);
 
 
             //1.Print out all the cats (there is no toString() available)
             System.out.println("1. All the cats: ");
             System.out.println("Name\tWeight\tAge\tCost");
-            for (int lcv = 0; lcv < numCats; lcv++) {
+            for (lcv = 0; lcv < numCats; lcv++) {
                 System.out.println(cats[lcv].getName() + "\t" + cats[lcv].getWeight()
                         + "\t" + cats[lcv].getAge() + "\t" + cats[lcv].getCost());
             }
@@ -30,28 +33,28 @@ public class BigArray2 {
 
             //4.The cat named Rascal died. Find that cat and remove it from the list.
             int rascalIndex = 0;
-            for (int lcv = 0; lcv < numCats; lcv++) {
+            for (lcv = 0; lcv < numCats; lcv++) {
                 if (cats[lcv].getName().equals("Rascal"))
                     rascalIndex = lcv;
             }
-            for (int lcv = rascalIndex; lcv < numCats - 1; lcv++)
+            for (lcv = rascalIndex; lcv < numCats - 1; lcv++)
                 cats[lcv] = cats[lcv + 1];
             numCats--;
 
             //5.A new kitten was brought in (Angel, 3.6, 1, 25.99).  Insert it into the 2nd cell.
-            for (int lcv = numCats + 1; lcv-- > 1; ){
+            for (lcv = numCats + 1; lcv-- > 1; ){
                 cats[lcv] = cats[lcv - 1];
         }
-            cats[1] = new Cat(name "Angel", weight 3.6, age 1, cost 25.99);
+            cats[1] = new Cat("Angel", 3.6, 1, 25.99);
             numCats++;
 
             //6.A new geriatric cat was found (Gimpy, 14.3, 10,  29.99). Put him on the list.
-            cats[numCats] = new Cat(name "Gimpy", weight 14.3, age 10, cost 29.99);
+            cats[numCats] = new Cat("Gimpy", 14.3,  10, 29.99);
             numCats++;
 
             //7.Print the updated list with a for-each loop
             System.out.println("\n7. The updated list is: ");
-            System.out.println("Name\tWeight\tAge\Cost");
+            System.out.println("Name\tWeight\tAge\tCost");
             for (Cat cat : cats) {
                 if (cat != null)
                 System.out.println(cat.getName() + "\t" + cat.getWeight() + "\t" + cat.getAge() + "\t" +
@@ -60,7 +63,7 @@ public class BigArray2 {
 
             //8.Replace the 3rd cat with (Sugar, 23.6, 7, 33.25) put the removed cat at the end of the list.
             Cat temp = cats[2];
-            cats[2] = new Cat("Sugar", weight 23.6, age 7, cost 35.25);
+            cats[2] = new Cat("Sugar",  23.6,  7, 35.25);
             cats[numCats] = temp;
             numCats++;
 
@@ -89,7 +92,7 @@ public class BigArray2 {
             }
 
             System.out.println("\n11. The cats costing $26 or more actually cost: ");
-            for (int lcv = 0; lcv < numCats; lcv++)
+            for ( lcv = 0; lcv < numCats; lcv++)
                 System.out.print(cats[lcv].getCost() + " ");
             System.out.println();
 //12.All cats heavier than 15 pounds need to go on a diet <--  no for-each this time.
@@ -104,6 +107,8 @@ public class BigArray2 {
             }
 
 
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         }
     }
 }

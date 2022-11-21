@@ -23,7 +23,8 @@ public class Cat {
         myCost = cost;
     }
 
-    /**
+
+        /**
      * Methods
      */
     public void setWeight(double weight) { myWeight = weight; }

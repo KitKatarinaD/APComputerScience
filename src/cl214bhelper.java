@@ -43,7 +43,14 @@ public class cl214bhelper {
         }
 
         mywholding = mygrosspay * mytaxrate;
-
+/*The social security tax (FICA tax) depends on the gross pay and the year-to-date pay.
+If the year-to-date pay is greater than $17,300, then there is no social security tax.
+ If the year-to-date pay plus the gross pay is less than or equal to $17,300, then the
+ social security tax is 6.05% of the gross pay. If the year-to-date pay is less than
+ $17,300, but the sum of the year-to-date pay and gross pay is greater than $17,300,
+  then the tax is 6.05% of the difference between $17,300 and the year-to-date pay
+   plus the gross pay.
+ */
         if (myytdPay > 17300) {
             myFICA = 0;
         }
@@ -53,9 +60,10 @@ public class cl214bhelper {
         if ((myytdPay < 17300 && (myytdPay + mygrosspay) > 17,300)) {
             myFICA = 0.0605 * (17300 - (myytdPay + mygrosspay))
         }
-
-        mynetpay =
+        mynetpay = mygrosspay - mywholding - myFICA;
     }
+
+    public int getMy
 
 
 
@@ -64,13 +72,7 @@ public class cl214bhelper {
 and print these results along with the employee’s number.
 
 
-The social security tax (FICA tax) depends on the gross pay and the year-to-date pay.
-If the year-to-date pay is greater than $17,300, then there is no social security tax.
- If the year-to-date pay plus the gross pay is less than or equal to $17,300, then the
- social security tax is 6.05% of the gross pay. If the year-to-date pay is less then
- $17,300, but the sum of the year-to-date pay and gross pay is greater than $17,300,
-  then the tax is 6.05% of the difference between $17,300 and the year-to-date pay
-   plus the gross pay.
+
 
 Sample output:
 

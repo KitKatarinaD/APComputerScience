@@ -63,8 +63,21 @@ If the year-to-date pay is greater than $17,300, then there is no social securit
         mynetpay = mygrosspay - mywholding - myFICA;
     }
 
-    public int getMy
-
+    public double getMygrosspay(){
+        return mygrosspay;
+    }
+    public double getMyFICA(){
+        return myFICA;
+    }
+    public double getMynetpay(){
+        return mynetpay;
+    }
+    public double getMywholding(){
+        return mywholding;
+    }
+    public double getMytaxrate(){
+        return mytaxrate;
+    }
 
 
 }
@@ -76,13 +89,7 @@ and print these results along with the employee’s number.
 
 Sample output:
 
-Employee number 1001
-Hours 34.50  Rate 4.50  Shift Factor 1.25
-             Current         Year-to date
-Gross Pay    194.06      1056.10
-Withholding    23.29
-FICA               11.74
-Net Pay        159.03
+
 
 Employee number 1002
 Hours 25.00  Rate 3.25  Shift Factor 1.00

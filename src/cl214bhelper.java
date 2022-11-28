@@ -57,8 +57,8 @@ If the year-to-date pay is greater than $17,300, then there is no social securit
         if ((myytdPay + mygrosspay) <= 17300  ) {
             myFICA = 0.0605 * mygrosspay;
         }
-        if ((myytdPay < 17300 && (myytdPay + mygrosspay) > 17,300)) {
-            myFICA = 0.0605 * (17300 - (myytdPay + mygrosspay))
+       if ((myytdPay < 17300 && (myytdPay + mygrosspay) > 17300)) {
+            myFICA = 0.0605 * (17300 - (myytdPay + mygrosspay));
         }
         mynetpay = mygrosspay - mywholding - myFICA;
     }

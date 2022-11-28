@@ -11,7 +11,7 @@ public class cl214b {
             double basepay = input.nextDouble();
             double shiftCode = input.nextDouble();
             double hrsworked = input.nextDouble();
-            cl214bhelper help = new cl214bhelper();
+    //        cl214bhelper help = new cl214bhelper();
 
 
 

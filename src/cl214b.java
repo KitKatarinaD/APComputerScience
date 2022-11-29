@@ -7,6 +7,7 @@ public class cl214b {
         try {
             Scanner input = new Scanner(new File("data/prog214b.dat"));
             cl214bhelper[] list = new cl214bhelper[100];
+            //making a new array of cl214bhelper objects..... and each cl214bhelper (object) has the ID, ytdpay, basepay...etc
             int size = 0;
         while (input.hasNext()){
             int ID = input.nextInt();
@@ -14,18 +15,28 @@ public class cl214b {
             double basepay = input.nextDouble();
             double shiftCode = input.nextDouble();
             double hrsworked = input.nextDouble();
+            //grabbing values from the data file in the correct order.
 
-            cl214bhelper help = new cl214bhelper(ID, ytdpay,basepay, shiftCode, hrsworked);
-            list[size] = help;
+            cl214bhelper person = new cl214bhelper(ID, ytdpay,basepay, shiftCode, hrsworked);
+            //creating a new cl214bhelper object with each of the variables in the data file
+            list[size] = person;
+            //put person into the "size" slot in list ---list is the array name
             size++;
+            //moves you over to the next slot
         }
         for (int index = 0; index < size; index++) {
             list[index].calc();
         }
+        //index 0 is the start of the list and size is the max index (the end of the list)
+            //for every index, you call calc on the person at that index
+
+        // for (cl214bhelper currentperson : list) { if (currentperson != null) System.out.println("..." + currentperson.getMyID)); } ...
         for (int index = 0; index < size; index++) {
             cl214bhelper cur = list[index];
+           //grab the cl214bhelper person from the current index (position) in the list (array)
 
             System.out.println("Employee number: " + cur.getMyID());
+            //getting ID from the current cl214bhelper person (so from that spot in the list it gets that ID)
             System.out.println("Hours: " + cur.getMyHoursWorked()  + "\t Rate:" + cur.getMytaxrate() + "\t Shift Factor"
              + cur.getMyShiftFactor());
             System.out.println("\t\t Current \t\t Year-To-Date");
@@ -41,6 +52,8 @@ public class cl214b {
         }
     }
 }
+
+
 /*
 C:\Users\dries.k\.jdks\openjdk-18.0.2.1\bin\java.exe "-javaagent:C:\Program Files (x86)\JetBrains\IntelliJ IDEA Community Edition 2021.3.1\lib\idea_rt.jar=63306:C:\Program Files (x86)\JetBrains\IntelliJ IDEA Community Edition 2021.3.1\bin" -Dfile.encoding=UTF-8 -classpath "C:\Users\dries.k\IdeaProjects\AP Computer Science\out\production\AP Computer Science" cl214b
 Employee number: 1001.0

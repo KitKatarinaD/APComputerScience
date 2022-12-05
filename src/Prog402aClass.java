@@ -13,6 +13,12 @@ public class Prog402aClass {
         mydiff = myscore - avg;
     }
 
+    public int getMyscore() {
+        return myscore;
+    }
+    public int getMyid() {
+        return myid;
+    }
 
 
 

@@ -8,6 +8,7 @@ public class prog402a {
             Scanner input = new Scanner(new File("data/prog402a.dat"));
             Prog402aClass[] list = new Prog402aClass[21];
             int size= 0;
+            System.out.println("ID\t\tScore\t\tDiff");
             while (input.hasNext()) {
                 int id = input.nextInt();
                 int score = input.nextInt();
@@ -15,12 +16,18 @@ public class prog402a {
                 list[size] = vector;
                 size++;
             }
+            double tot = 0;
+            for (Prog402aClass vector : list) {
+                tot = tot + vector.getMyscore(); //gets score from vector "book"
+            }
+            double avg = tot/size;
+            //calculated average of all scores
 
             for (int index = 0; index < size; index++) {
                 list[index].calc(avg);
-
-
-
+            }
+            for (Prog402aClass vector : list) {
+                System.out.println(vector.getMyid());
             }
 
 

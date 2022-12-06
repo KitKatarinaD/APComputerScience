@@ -19,6 +19,9 @@ public class Prog402aClass {
     public int getMyid() {
         return myid;
     }
+    public double getMydiff() {
+        return mydiff;
+    }
 
 
 

@@ -1,4 +1,5 @@
 public class Prog435aClass {
+    private int mycar;
     private double myfactor;
     private String mytype;
     private int mygate;
@@ -6,8 +7,8 @@ public class Prog435aClass {
     private double mycost;
 
 
-    public Prog435aClass(double factor, int gate) {
-        myfactor = factor;
+    public Prog435aClass(int car, int gate) {
+        mycar = car;
         mygate = gate;
         mytoll = 0;
         mycost = 0;
@@ -15,12 +16,12 @@ public class Prog435aClass {
     }
 
     public void calc() {
-        if (myfactor == 1.0) { mytype = "Compact Car";}
-        else if (myfactor == 1.3) { mytype = "Small Car";}
-        else if (myfactor == 1.6) {mytype = "Mid Size Car";}
-        else if (myfactor == 2.0) {mytype = "Full Size Car";}
-        else if (myfactor == 2.4) {mytype = "Truck";}
-        else if (myfactor == 2.7) {mytype = "16 Wheeler";}
+        if (mycar==1) { mytype = "Compact Car"; myfactor = 1.0;}
+        else if (mycar==2) { mytype = "Small Car"; myfactor = 1.3;}
+        else if (mycar==3) {mytype = "Mid Size Car"; myfactor = 1.6;}
+        else if (mycar==4) {mytype = "Full Size Car"; myfactor = 2.0;}
+        else if (mycar==5) {mytype = "Truck"; myfactor = 2.4;}
+        else if (mycar==6) {mytype = "16 Wheeler"; myfactor = 2.7;}
 
         if (mygate == 1) { mytoll=1.35;}
         else if (mygate == 2) { mytoll=2.00;}

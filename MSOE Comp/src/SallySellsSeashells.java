@@ -6,6 +6,7 @@ public class SallySellsSeashells {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int shellnum = 0;
+
         System.out.println("How many shells are you entering? ");
          shellnum = input.nextInt();
         ArrayList<Integer> Shellw = new ArrayList<Integer>();

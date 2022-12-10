@@ -26,37 +26,72 @@ public class cl214bhelper {
 //The gross pay is found by multiplying the hours worked by the pay rate where
 //the pay rate is the product of the base pay rate and the shift factor.
     public void calc() {
+        double tax = 0;
+
+        mytaxrate = mybasepay * myshiftCode;
+
         mygrosspay = myhrsworked * (mybasepay * myshiftCode);
+
         if (mygrosspay < 100.00)
-            mytaxrate = 0.0;
+            tax = 0.0;
         else if (mygrosspay >= 100.0 && mygrosspay < 150.0) {
-            mytaxrate = 0.80;
+            tax = 0.08;
         }
         else if (mygrosspay >= 150.0 && mygrosspay < 200.0){
-            mytaxrate = 0.120;
+            tax = 0.120;
         }
         else if (mygrosspay >= 200.0 && mygrosspay < 300.0){
-            mytaxrate = 0.150;
+            tax = 0.150;
         }
         else {
-            mytaxrate = 0.175;
+            tax = 0.175;
         }
 
-        mywholding = mygrosspay * mytaxrate;
+        mywholding = mygrosspay * tax;
 
+        double totpay = myytdPay + mygrosspay;
         if (myytdPay > 17300) {
             myFICA = 0;
         }
-        if ((myytdPay + mygrosspay) <= 17300  ) {
+        else if ((totpay) <= 17300) {
             myFICA = 0.0605 * mygrosspay;
         }
-        if ((myytdPay < 17300 && (myytdPay + mygrosspay) > 17,300)) {
-            myFICA = 0.0605 * (17300 - (myytdPay + mygrosspay))
+        else if ((myytdPay < 17300) &&  (totpay > 17300)) {
+            myFICA = 0.0605 * (totpay - 17300);
         }
-
-        mynetpay =
+        mynetpay = mygrosspay - mywholding - myFICA;
     }
 
+    public double getMygrosspay(){
+        return mygrosspay;
+    }
+    public double getMyFICA(){
+        return myFICA;
+    }
+    public double getMynetpay(){
+        return mynetpay;
+    }
+    public double getMywholding(){
+        return mywholding;
+    }
+    public double getMytaxrate(){
+        return mytaxrate;
+    }
+    public double getMyytdPay() {
+        return myytdPay;
+    }
+    public double getMyID() {
+        return myID;
+    }
+    public double getMyHoursWorked() {
+        return myhrsworked;
+    }
+    public double getMyNetPay(){
+        return mynetpay;
+    }
+    public double getMyShiftFactor(){
+        return myshiftCode;
+    }
 
 
 }
@@ -64,23 +99,11 @@ public class cl214bhelper {
 and print these results along with the employee’s number.
 
 
-The social security tax (FICA tax) depends on the gross pay and the year-to-date pay.
-If the year-to-date pay is greater than $17,300, then there is no social security tax.
- If the year-to-date pay plus the gross pay is less than or equal to $17,300, then the
- social security tax is 6.05% of the gross pay. If the year-to-date pay is less then
- $17,300, but the sum of the year-to-date pay and gross pay is greater than $17,300,
-  then the tax is 6.05% of the difference between $17,300 and the year-to-date pay
-   plus the gross pay.
+
 
 Sample output:
 
-Employee number 1001
-Hours 34.50  Rate 4.50  Shift Factor 1.25
-             Current         Year-to date
-Gross Pay    194.06      1056.10
-Withholding    23.29
-FICA               11.74
-Net Pay        159.03
+
 
 Employee number 1002
 Hours 25.00  Rate 3.25  Shift Factor 1.00

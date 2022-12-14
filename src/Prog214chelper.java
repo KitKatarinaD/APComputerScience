@@ -3,7 +3,7 @@ public class Prog214chelper {
     private double myP;
     private double myH;
     private double mywash;
-    private double mytot
+    private double mytot;
 
     public Prog214chelper(double R, double P, double H) {
     myR = R;
@@ -14,7 +14,7 @@ public class Prog214chelper {
     }
 
     public void calc() {
-        if (myR > || myP || myH)
+  //      if (myR > || myP || myH)
         mytot = myR + myP + myH + mywash;
 
     }

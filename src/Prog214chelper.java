@@ -14,7 +14,7 @@ public class Prog214chelper {
     }
 
     public void calc() {
-  //      if (myR > || myP || myH)
+      if (myR > || myP || myH)
         mytot = myR + myP + myH + mywash;
 
     }

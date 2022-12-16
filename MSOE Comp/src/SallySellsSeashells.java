@@ -1,25 +1,34 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 
 public class SallySellsSeashells {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.print("Enter the shell weights: ");
+        int shellnum = 0;
 
-        int[] weights=new int[100];
-        int count=1;
-        int countless=0;
-        for (int lcv=0; lcv<count; lcv++) {
-            int we=input.nextInt();
-            weights[lcv]=we;
-            count++;
+        System.out.println("How many shells are you entering? ");
+         shellnum = input.nextInt();
+        ArrayList<Integer> Shellw = new ArrayList<Integer>();
+        for(int i = 0; i < shellnum; i++)
+        {
+            System.out.println("What is the weight of shell " + (i+1));
+            Shellw.add(input.nextInt());
         }
-        for (int lcv=0; lcv<count; lcv++) {
-            if (weights[lcv]<100) {
-                countless++;
-            }
+
+        int count = 0;
+        for(int i = 0; i < Shellw.size(); i++)
+        {
+            count += Shellw.get(i);
         }
-        System.out.println(countless);
+        int buckets = 0;
+        buckets = count / 100;
+        if(count %100 > 0)
+        {
+            buckets += 1;
+        }
+
+        System.out.println("The total amount of buckets you need is " + buckets);
 
     }
 }

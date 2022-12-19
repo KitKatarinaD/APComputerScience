@@ -1,5 +1,5 @@
 public class ArraylistLab {
-        public static void main(String[] args) {
+    /*    public static void main(String[] args) {
             ArraylistLabhelper  list = new ArraylistLabhelper();
             System.out.println("Testing add() and get()...");
             for (int i = 0; i < 10; i++)
@@ -73,3 +73,4 @@ list.indexOf(12) = 12
 Process finished with exit code 0
 
  */
+}

@@ -4,6 +4,8 @@ public class Prog214chelper {
     private double myH;
     private double mywash;
     private double mytot;
+    private double mytemp;
+
 
     public Prog214chelper(double R, double P, double H) {
     myR = R;
@@ -11,11 +13,32 @@ public class Prog214chelper {
     myH = H;
     mywash = 2.00;
     mytot = 0;
+    mytemp = 0;
     }
 
-    public void calc() {
-      if (myR > 10 || myP || myH)
-        mytot = myR + myP + myH + mywash;
+    public void calc() { //price of wash
+      if (myR >= 10) {
+          mytemp = myR - 10;
+      }else if (myP >= 10) {
+
+      }else if (myH >= 10){
+
+      }else {
+          mytemp = 0;
+      }
+      //set the temp vsalue to a value and then must replace the stuff underneath this comment
+        //with the value of mytemp. you will need to write a loop to take 10% each time of the loop.
+
+          if (myR >= 20 || myP >= 20 || myH >= 20) {
+              mywash = 0.00;
+          } else {
+              for (int lcv = 0; lcv < (myR - 10); lcv ++) {
+                  mywash =
+              }
+              mywash = (myR - 10)
+          }
+          mytot = myR + myP + myH + mywash;
+
 
     }
     /*

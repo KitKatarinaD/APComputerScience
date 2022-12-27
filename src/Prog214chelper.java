@@ -1,46 +1,66 @@
 public class Prog214chelper {
-    private double myR;
-    private double myP;
-    private double myH;
-    private double mywash;
+    private String mytype;
+    private double mygal;
+    private double mywashprice;
     private double mytot;
     private double mytemp;
+    private double mytypecost;
+    private String mywash;
+    private double mygasprice;
 
 
-    public Prog214chelper(double R, double P, double H) {
-    myR = R;
-    myP = P;
-    myH = H;
-    mywash = 2.00;
+    public Prog214chelper(String type, double gal, String wash) {
+    mytype = type;
+    mywash = wash;
+    mywashprice = 2.00;
     mytot = 0;
     mytemp = 0;
+    mygal = gal;
+    mytypecost = 0;
+    mygasprice = 0;
+    }
+                            //when 20 or more gallons purchased, car wash is free
+    public void calc() { //price of wash  is reduced by 10% for every gallon after the 10th-- temp is how many times the loop is run and 10% is taken off
+
+//wash price:
+        if (mywash.equals("Y")) {
+            if (mygal >= 20) {
+                mytemp = 0;
+            }else if (mygal >= 10) {
+                mytemp = Math.floor(mygal - 10);
+            }else {
+                mytemp = 0;
+            }
+            if (mytemp > 0) {
+               mywashprice = 2*(1-(mytemp * 0.1));
+            }else {mywashprice = 0;}
+
+        }else{mywashprice = 0;}
+
+        //price of gas:
+        if (mytype.equals("P")) {
+            mytypecost = 1.479;
+        }else if (mytype.equals("R")) {
+            mytypecost = 1.359;
+        }else {
+            mytypecost = 1.429;
+        }
+
+
+        mytot = mygal*(mytypecost) + mywashprice;
+        mygasprice = mygal * (mytypecost);
     }
 
-    public void calc() { //price of wash
-      if (myR >= 10) {
-          mytemp = myR - 10;
-      }else if (myP >= 10) {
-
-      }else if (myH >= 10){
-
-      }else {
-          mytemp = 0;
-      }
-      //set the temp vsalue to a value and then must replace the stuff underneath this comment
-        //with the value of mytemp. you will need to write a loop to take 10% each time of the loop.
-
-          if (myR >= 20 || myP >= 20 || myH >= 20) {
-              mywash = 0.00;
-          } else {
-              for (int lcv = 0; lcv < (myR - 10); lcv ++) {
-                  mywash =
-              }
-              mywash = (myR - 10)
-          }
-          mytot = myR + myP + myH + mywash;
+    public double getMygal() {return mygal;}
+    public String getmytype() {return mytype;}
+    public double getMytypecost() {return mytypecost;}
+    public double getMywashprice() {return mywashprice;}
+    public String getmywash() {return mywash;}
+    public double getMytot() {return mytot;}
+    public double getMygasprice() {return mygasprice;}
 
 
-    }
+
     /*
     A service station with a car wash sells three grades of gasoline:
      regular unleaded at $1.359 per gallon,

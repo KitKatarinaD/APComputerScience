@@ -1,4 +1,4 @@
-public class prog215iclass {
+public class prog215iclass {  //one vehicle
     private double mygal;
     private int myvehicle;
     private double mymiles;

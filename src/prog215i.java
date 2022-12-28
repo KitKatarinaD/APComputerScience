@@ -5,7 +5,26 @@ import java.util.Scanner;
 public class prog215i {
     public static void main(String[] args) {
         try {
-            Scanner input = new Scanner(new File("data/prog215i.dat"));
+            Scanner input = new Scanner(new File("data/prog215i.dat "));
+            int numpumps = input.nextInt();
+            input.nextLine();
+            ArrayList<prog215iclass> pump = new ArrayList<prog215iclass>();
+
+
+            for (int lcv = 0; lcv < pump.size(); lcv++) {
+                int vehicle = input.nextInt();
+                double gal = input.nextDouble();
+                double miles = input.nextDouble();
+            }
+            for (int lcv = 0; lcv < numCats; lcv++) {
+                String name = input.nextLine();
+                double weight = input.nextDouble();
+                int age = input.nextInt();
+                double cost = input.nextDouble();
+                input.nextLine();
+                cats.add(new Cat(name, weight, age, cost));
+            }
+
 
         } catch (IOException e) {
             System.out.println("Can't find data file!");

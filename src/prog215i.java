@@ -15,14 +15,8 @@ public class prog215i {
                 int vehicle = input.nextInt();
                 double gal = input.nextDouble();
                 double miles = input.nextDouble();
-            }
-            for (int lcv = 0; lcv < numCats; lcv++) {
-                String name = input.nextLine();
-                double weight = input.nextDouble();
-                int age = input.nextInt();
-                double cost = input.nextDouble();
                 input.nextLine();
-                cats.add(new Cat(name, weight, age, cost));
+                pump.add(new prog215iclass(vehicle, gal, miles));
             }
 
 

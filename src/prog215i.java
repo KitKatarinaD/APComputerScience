@@ -20,6 +20,12 @@ public class prog215i {
             }
 
 
+            System.out.println("Vehicle\tMiles\tGallons\tMPG");
+            for (prog215iclass car : pump) {
+                System.out.println(pump.get(car.getMyvehicle()) + "\t" + car.getMymiles() + "\t" + car.getMygal() + "\t" + car.getMympg());
+            }
+
+
         } catch (IOException e) {
             System.out.println("Can't find data file!");
         }

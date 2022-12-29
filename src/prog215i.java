@@ -11,7 +11,7 @@ public class prog215i {
             ArrayList<prog215iclass> pump = new ArrayList<prog215iclass>();
 
 
-            for (int lcv = 0; lcv < pump.size(); lcv++) {
+            for (int lcv = 0; lcv < numpumps; lcv++) {
                 int vehicle = input.nextInt();
                 double gal = input.nextDouble();
                 double miles = input.nextDouble();

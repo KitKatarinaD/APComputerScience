@@ -32,8 +32,6 @@ public class Prog470b {
                   System.out.println("Main diagonal sum: " + sum1);
                   System.out.println("Other diagonal sum: " + sum2);
 
-              
-
         } catch (IOException e) {
             System.out.println("Can't find data file!");
         }

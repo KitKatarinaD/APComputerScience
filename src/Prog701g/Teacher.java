@@ -7,4 +7,5 @@ public class Teacher extends Person {
     super(f, l);
     myNumStuds = stu;
   }
+  public int getNumStuds() { return myNumStuds; }
 }

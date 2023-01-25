@@ -7,13 +7,14 @@ public class Prog215h {
     public static void main(String[] args) {
         try {
             Scanner input = new Scanner(new File("data/Prog215h.txt"));
-            ArrayList<Double> contestant1 = new ArrayList<Double>();
+            ArrayList<prog215hHelper> contestant1 = new ArrayList<prog215hHelper>();
+            prog215hHelper help = new prog215hHelper( one, double two, double three, double four, double five, double six, double seven, double eight)
             for (int i = 0; i < 8; i++) {
-                contestant1.add(input.nextDouble());
+                contestant1.set(i, prog215hHelper);
+                prog215hHelper.calc();
             }
-            double tot1 = 0;
 
-            for (double score : contestant1) {
+            for (prog215hHelper score : contestant1) {
                 tot1 += score;
             }
             double avg1 = tot1/8;
@@ -22,34 +23,6 @@ public class Prog215h {
             System.out.println();
 
 
-            ArrayList<Double> contestant2 = new ArrayList<Double>();
-            for (int i = 0; i < 8; i++) {
-                contestant2.add(input.nextDouble());
-            }
-            double tot2 = 0;
-
-            for (double score : contestant2) {
-                tot2 += score;
-            }
-            double avg2 = tot2/8;
-
-            System.out.println("Contestant 2: " + contestant2 + " = " + avg2);
-            System.out.println();
-
-
-            ArrayList<Double> contestant3 = new ArrayList<Double>();
-            for (int i = 0; i < 8; i++) {
-                contestant3.add(input.nextDouble());
-            }
-            double tot3 = 0;
-
-            for (double score : contestant3) {
-                tot3 += score;
-            }
-            double avg3 = tot3/8;
-
-            System.out.println("Contestant 3: " + contestant3 + " = " + avg3);
-            System.out.println();
 
 
         } catch (IOException e) {

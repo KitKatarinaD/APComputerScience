@@ -18,7 +18,11 @@ public class Prog701g {
                 double g = input.nextDouble();
                 Person p = new Student(f, l, g);  //the arraylist is objects person, and they have the same methods? so its better to put it as student
                 list.add(p);
-              }else if (num==3) {
+              } else if (num == 2) {
+                  int n = input.nextInt();
+                  Person p = new Teacher(f, l, n);
+                  list.add(p);
+              } else if (num==3) {
                 String fav = input.next();
                 Person p = new Admin(f, l, fav);
                 list.add(p);
@@ -64,3 +68,13 @@ public class Prog701g {
         }
     }
 }
+/*
+C:\Users\katar\.jdks\openjdk-19.0.1\bin\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.3\lib\idea_rt.jar=64925:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.3\bin" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath "C:\Users\katar\IdeaProjects\APComputerScience\out\production\AP Computer Science" Prog701g.Prog701g
+Avg student GPA: 3.06
+Total num of students taught by teachers: 316
+Smallest favorite admin word: done
+Largest favorite admin word: coolbeans
+
+Process finished with exit code 0
+
+ */

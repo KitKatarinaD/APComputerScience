@@ -23,17 +23,36 @@ public class Prog465h {
             }
 
 
-            int[][] sm1 = new int[mat1.length][];
 
-
+            System.out.println("New matrix: ");
+            int x = 0;
             for (int r = 0; r < mat1.length; r++) {
-                for (int c = 0; c<mat1.length; c++ ) {
+                for (int c = 0; c<mat1[r].length; c++ ) {
                     if (mat1[r][c] != 0) {
-                        for (int x = 0; x < sm1[].length;)
-                            sm1[r][c] =
+                        x++;
                     }
                 }
             }
+            int[] nums = new int[x];
+
+
+
+            int[][] sm1 = new int[nums.length][3];
+
+            for (int r = 0; r < mat1.length; r++) {
+                for (int c = 0; c < mat1[r].length; c++) {
+                    if (mat1[r][c] != 0) {
+                        sm1[sm1.length-1-x][0] = r;
+                        sm1[sm1.length-1-x][1] = c;
+                        sm1[sm1.length-1-x][2]=mat1[r][c];
+                        x--;
+                    }
+                }
+            }
+
+
+
+
 
 
 

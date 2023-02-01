@@ -34,7 +34,7 @@ public class Prog465h {
                 }
             }
             int[] nums = new int[x];
-
+            int y = x;
 
 
             int[][] sm1 = new int[nums.length][3];
@@ -50,6 +50,7 @@ public class Prog465h {
                 }
             }
 
+            if ((sm1.length)==(y))
             System.out.println("");
 
 

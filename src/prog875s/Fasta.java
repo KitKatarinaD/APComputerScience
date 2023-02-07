@@ -14,7 +14,7 @@ public class Fasta implements Sequence {
         }
 
         public boolean compare(Fasta other) {
-            return this.header.equals(other.getHeader()) && this.sequence.equals(other.getSequance());
+            return this.header.equals(other.getHeader()) && this.sequence.equals(other.getSequence());
         }
 
         public String getHeader() { return header;}

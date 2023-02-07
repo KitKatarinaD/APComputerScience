@@ -3,7 +3,6 @@ package prog875s;
 public class Gene extends Fasta{
     private String organism;
     private String geneName;
-    private String geneName;
     private String geneID;
     private String description;
 
@@ -16,13 +15,13 @@ public class Gene extends Fasta{
         organism = organism.substring(organism.indexOf("=")+1, organism.length()-1);
         description = headerParts[3];
     }
-    public boolean compare(Gene other) {super.compare(other);}
+    public boolean compare(Gene other) {return super.compare(other);}
     public String toString() {return geneID + " " + geneName + " "+organism+" "+description;}
 
     public int align(Gene other, int mismatchPenalty, int gapPenalty){
         //Needleman-Wunsch algorithm
         //initialize matrix; clamp to shoter sequence
-        int len = Math.min(this.getSequance().length(), other.getSequance().length()) + 1;
+        int len = Math.min(this.getSequence().length(), other.getSequence().length()) + 1;
         int[][] matrix = new int[len][len];
 
         //initialize first row and col
@@ -39,7 +38,7 @@ public class Gene extends Fasta{
         for (int lcv = 1; lcv < matrix.length; lcv++){
             for (int lcv2 = 1; lcv2 < matrix[lcv].length; lcv2++) {
                 match =0;
-                if (!getSequance().substring(lcv-1, lcv).equals(other.getSequance().substring(lcv2-1, lcv2)))match = mismatchPenalty;
+                if (!getSequence().substring(lcv-1, lcv).equals(other.getSequence().substring(lcv2-1, lcv2)))match = mismatchPenalty;
                 diag = matrix[lcv-1][lcv2-1] + match;
                 left = matrix[lcv][lcv2-1] + gapPenalty;
                 up = matrix[lcv][lcv2] = Math.min(diag, Math.min(left, up));
@@ -54,19 +53,34 @@ public class Gene extends Fasta{
 
         while (i > 0 && j > 0) {
             match = 0;
-            if (!getSequance().substring(i-1, i).equals(other.getSequance().substring(j-1, j)))
+            if (!getSequence().substring(i-1, i).equals(other.getSequence().substring(j-1, j)))
                 match = mismatchPenalty;
             diag = matrix[i-1][j-1] + match;
             left = matrix[i][j-1] + gapPenalty;
-            up - matrix[i-1][j] + gapPenalty;
+            up = matrix[i-1][j] + gapPenalty;
 
             if (matrix[i][j] == diag) {
-                alignment1 = this.getSequance().substring(i-1, i) + alignment1;
-                alignment2 = other.getSequance().substring(j-1, j) + alignment2;
+                alignment1 = this.getSequence().substring(i-1, i) + alignment1;
+                alignment2 = other.getSequence().substring(j-1, j) + alignment2;
                 i--;
                 j--;
+            }else if (matrix[i][j] == left) {
+                alignment1 = "_" + alignment1;
+                alignment2 = other.getSequence().substring(j-1, j) + alignment2;
+                j--;
+            }else if (matrix[i][j] == up) {
+                alignment1 = this.getSequence().substring(i-1, i) + alignment1;
+                alignment2 = "_" + alignment2 ;
+                i--;
             }
         }
-        return -1;
+        //print alignment
+        int score = matrix[matrix.length-1][matrix[0].length-1];
+        System.out.println(this.organism+ " gene "+this.geneID+": \n\t" + alignment1);
+        System.out.println(other.organism +" gene " + other.geneID + ": \n\t" + alignment2 );
+        System.out.println("Alignment score: " + score);
+        return score;
+
     }
+
 }

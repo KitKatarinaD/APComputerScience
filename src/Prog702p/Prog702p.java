@@ -15,9 +15,11 @@ public class Prog702p {
             while (num!=99) {
                 String name = input.next();
                 String word = input.next();
-
+                animal a = new animal(name, word);
+                animalList.add(a);
 
                 if (num==1) {
+
 
                 }
 
@@ -33,6 +35,9 @@ public class Prog702p {
 
 
             }
+
+
+            System.out.print("The number of animals is: " + animalList);
 
         } catch (IOException e) {
             System.out.println("Can't find data file!");

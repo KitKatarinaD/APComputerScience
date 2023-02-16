@@ -10,7 +10,7 @@ public class Hicca extends animal {
 
     }
 
-    public double getfur(){return myfur;}
+    public double getfur() {return myfur;}
     //you dont need to do the get methods for name and word because they were already inherited
 
 

@@ -13,7 +13,8 @@ public class Prog702p {
             int num = input.nextInt();
 
             while (num!=99) {
-                String
+                String name = input.next();
+                String word = input.next();
 
 
                 if (num==1) {

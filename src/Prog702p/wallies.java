@@ -1,14 +1,14 @@
 package Prog702p;
 
 public class wallies extends animal{
-    private double mysteps;
+    private int mysteps;
 
-    public wallies(double steps, String word, String name) {
+    public wallies(String name,  String word, int steps) {
         super(name, word);
         mysteps = steps;
     }
 
-    public double getSteps() {return mysteps;}
+    public int getSteps() {return mysteps;}
 
 
 

@@ -3,7 +3,7 @@ package Prog702p;
 public class beeper extends animal {
     private String myextraword;
 
-    public beeper(String extraword, String word, String name) {
+    public beeper(String name, String word, String extraword) {
         super(word, name);
         myextraword = extraword;
     }

@@ -4,7 +4,7 @@ public class Hicca extends animal {
     private double myfur;
 
 
-    public Hicca(double fur, String word, String name) {
+    public Hicca(String name, String word, double fur) {
         super(name, word); //calls the constructor from what you extended (animal)
         myfur = fur;
 

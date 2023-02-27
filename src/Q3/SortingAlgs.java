@@ -1,3 +1,7 @@
+package Q3;
+
+import Q3.prog408ahelper;
+
 public class SortingAlgs {
     public static int[] bubbleSort(int[] Array) {
         for (int lcv = 0; lcv <Array.length; lcv++){

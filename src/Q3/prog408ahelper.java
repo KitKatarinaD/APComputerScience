@@ -1,3 +1,5 @@
+package Q3;
+
 public class prog408ahelper {
     private int myID;
     private int myScore;

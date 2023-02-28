@@ -19,6 +19,9 @@ public class prog477a {
             }
 
             System.out.println("Grade\tMale\tFemale\tTotal");
+            System.out.print("A" +);
+
+
 
         } catch (IOException e) {
             System.out.println("Can't find data file!");

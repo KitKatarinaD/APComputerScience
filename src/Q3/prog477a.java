@@ -19,7 +19,7 @@ public class prog477a {
             }
 
             System.out.println("Grade\tMale\tFemale\tTotal");
-            System.out.print("A" +);
+          //  System.out.print("A" +);
 
 
 

@@ -67,17 +67,14 @@ public class prog295c {
             }
 
             //copy and paste bubble sort
-            int x = 1;
-            while (finallist.get(x-1).getMyssn() > finallist.get(x).getMyssn()) {
-                for (int i = 1; i < finallist.size() - 1; i++) {
-
-                    if (finallist.get(i).getMyssn() < finallist.get(i - 1).getMyssn()) {
-                        finallist.add(i - 1, finallist.get(i));
-                        finallist.set(i + 1, finallist.get(i));
-
+            for (int lcv = 0; lcv <finallist.size(); lcv++){
+                for (int lcv2 = 0; lcv2 <finallist.size()-1; lcv2++){
+                    if (finallist.get(lcv2).getMyssn() > finallist.get(lcv2+1).getMyssn()){
+                        employee temp = finallist.get(lcv2);
+                        finallist.set(lcv2, finallist.get(lcv2+1));
+                        finallist.set(lcv2+1, temp);
                     }
                 }
-                x++;
             }
 
             System.out.println("social sec#\tClass\tType\tDept");
@@ -91,3 +88,54 @@ public class prog295c {
         }
     }
 }
+/*
+C:\Users\katar\.jdks\openjdk-19.0.1\bin\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.3\lib\idea_rt.jar=58053:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.3\bin" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath "C:\Users\katar\IdeaProjects\APComputerScience\out\production\AP Computer Science" Q3.prog295c
+social sec#	Class	Type	Dept
+1	A	B	1
+111111111	A	B	1
+111111111	A	B	1
+111111111	A	B	1
+123456789	C	F	5
+222222227	D	L	9
+222222227	D	L	9
+222222227	D	L	9
+321012345	A	B	1
+321012345	A	B	1
+321012345	A	B	1
+357864219	C	F	5
+357864219	C	F	5
+357864219	C	F	5
+411529485	D	L	9
+411529485	D	L	9
+411529485	D	L	9
+432233489	A	B	1
+514981234	A	B	1
+514985555	C	F	5
+514985555	C	F	5
+514985555	C	F	5
+521968743	C	F	5
+521968743	C	F	5
+521968743	C	F	5
+522778765	C	F	5
+522778766	C	F	5
+522778767	C	F	5
+525252525	A	B	1
+525252525	A	B	1
+525252525	A	B	1
+531459260	C	F	5
+538111234	D	L	9
+538111234	D	L	9
+538111234	D	L	9
+539121235	D	L	9
+539121235	D	L	9
+539121235	D	L	9
+540131236	D	L	9
+540131236	D	L	9
+540131236	D	L	9
+541141237	C	F	5
+541141237	C	F	5
+541141237	C	F	5
+
+Process finished with exit code 0
+
+ */

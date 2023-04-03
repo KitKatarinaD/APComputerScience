@@ -22,6 +22,7 @@ public class prog408a {
                  System.out.println(list[lcv].getID() + "\t"+ list[lcv].getScore());
              }
 
+
         } catch (IOException e) {
             System.out.println("Can't find data file!");
         }

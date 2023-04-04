@@ -9,12 +9,19 @@ public class prog607a {
         System.out.print("Select an option: ");
         int selection = input.nextInt();
 
-        if (selection == 0);
+        if (selection == 0) {return;}
+        if (selection==1){
+
+        }
+
 
     }
 
-    public int thing(int selection){
-        if (selection==0) {return 0;}
-     return
+    public int decode(){
+return -1;
+    }
+
+    public String encode(){
+return "";
     }
 }

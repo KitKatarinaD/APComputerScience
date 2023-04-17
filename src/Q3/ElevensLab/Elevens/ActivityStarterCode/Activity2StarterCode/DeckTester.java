@@ -14,6 +14,7 @@ public class DeckTester {
 		String[] suits = {"diamond", "hearts", "diamond"};
 		int[] values = {11, 13, 12};
 		Deck deck = new Deck(ranks, suits, values);
-		System.out.println(Deck.deal());
+		System.out.println(deck.deal());
 	}
 }
+//why is deal red and do i have to do the questions?

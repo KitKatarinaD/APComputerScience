@@ -1,5 +1,7 @@
 package Q3.ElevensLab.Elevens.ActivityStarterCode.Activity3StarterCode;
 
+import java.util.ArrayList;
+
 /**
  * This class provides a convenient way to test shuffling methods.
  */
@@ -52,7 +54,22 @@ public class Shuffler {
 	 * @param values is an array of integers simulating cards to be shuffled.
 	 */
 	public static void perfectShuffle(int[] values) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 3 *** */
+		ArrayList<Integer> temp1 = new ArrayList<Integer>();
+		ArrayList<Integer> temp2 = new ArrayList<Integer>();
+		//two different lists. first half and second half are two different lists.
+		for (int i = 0; i < values.length/2 ; i ++) {
+			temp1.add(values[i]);
+		}
+		for (int i = values.length/2; i < values.length;  i++){
+			temp2.add(values[i]);
+		}
+
+		for (int i = temp1.size(); i --> 0; ) {
+			temp2.add(i, values[i]);
+		}
+		for (int value : values) {
+			values[value] = temp2.get(value);
+		}
 	}
 
 	/**
@@ -67,6 +84,8 @@ public class Shuffler {
 	 * @param values is an array of integers simulating cards to be shuffled.
 	 */
 	public static void selectionShuffle(int[] values) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 3 *** */
+		for (int k = values.length; k --> 0;) {
+
+		}
 	}
 }

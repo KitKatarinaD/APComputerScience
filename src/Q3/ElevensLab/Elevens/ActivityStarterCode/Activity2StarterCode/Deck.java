@@ -72,7 +72,10 @@ public class Deck {
 	 *         previously dealt.
 	 */
 	public Card deal() {
-
+		if (cards.size()>0){
+			size--;
+			return cards.get(size);
+		}else return null;
 	}
 
 	/**

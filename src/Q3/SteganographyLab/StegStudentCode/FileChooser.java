@@ -108,16 +108,17 @@ public class FileChooser
     // try to find the images directory
       try {
         // get the URL for where we loaded this class 
-        Class currClass = Class.forName("FileChooser");
-        URL classURL = currClass.getResource("FileChooser.class");
-        URL fileURL = new URL(classURL,"../images/");
-        directory = fileURL.getPath();
-        directory = URLDecoder.decode(directory, "UTF-8");
-        dirFile = new File(directory);
-        if (dirFile.exists()) {
-          //setMediaPath(directory);
-          return directory;
-        }
+//        Class currClass = Class.forName("FileChooser");
+//        URL classURL = currClass.getResource("FileChooser.class");
+//        URL fileURL = new URL(classURL,"../images/");
+//        directory = fileURL.getPath();
+//        directory = URLDecoder.decode(directory, "UTF-8");
+//        dirFile = new File(directory);
+//        if (dirFile.exists()) {
+//          //setMediaPath(directory);
+//          return directory;
+//        }
+        return "src/Q3/SteganographyLab/StegStudentCode/";
       } catch (Exception ex) {
       }
       

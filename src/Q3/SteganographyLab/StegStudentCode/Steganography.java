@@ -26,11 +26,45 @@ public class Steganography {
         }
         return temp;
     }
+
+    /**
+     * Set the lower 2 bits in a pixel to the highest to bits in c
+     */
+    public static void setLow(Pixel p, Color c){
+        int r = p.getRed() /4 ;
+        int g = p.getGreen() / 4;
+        int b = p.getBlue() /4;
+
+
+        int rc = c.getRed() /64;
+        int gc = c.getGreen() /64;
+        int bc = c.getBlue() /64;
+
+        p.setRed(r*4 + rc);
+        p.setGreen(g*4 + gc);
+        p.setBlue(b*4 + bc);
+    }
+
+    public static Picture testSetLow(Picture p, Color c){
+        Picture temp =  new Picture(p);
+        for (int r = 0; r < temp.getWidth(); r++){
+            for (int i = 0; i <temp.getHeight(); i++) {
+                setLow(temp.getPixel(r, i), c);
+            }
+        }
+        return temp;
+    }
+
+
+
+
+
+    //________________________________________________________________________________________
     public static void main(String[] args) {
-        Picture beach = new Picture ("beach.jpg");
-        beach.explore();
-        Picture copy = testClearLow(beach);
-        copy.explore();
+        Picture beach2 = new Picture ("beach.jpg");
+        beach2.explore();
+        Picture copy2 = testSetLow(beach2, Color.PINK);
+        copy2.explore();
 
 
     }

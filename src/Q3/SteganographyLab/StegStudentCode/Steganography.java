@@ -55,7 +55,21 @@ public class Steganography {
         return temp;
     }
 
+    /**
+     * sets the highest two bits of each pixel's colors
+     * to lowest two bits of each pixel's colors
+     */
+    public static Picture revealPicture(Picture hidden){
+        Picture copy = new Picture(hidden);
+        Pixel[][] pixels = copy.getPixels2D();
+        Pixel[][] source = hidden.getPixels2D();
+        for (int r = 0; r < pixels.length; r++) {
+            for (int c = 0; c < pixels[0].length; c++){
+                Color col = source[r][c].getColor();
 
+            }
+        }
+    }
 
 
 
